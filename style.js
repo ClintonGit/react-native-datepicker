@@ -21,7 +21,6 @@ let style = StyleSheet.create({
     height: 40,
     borderWidth: 1,
     borderColor: '#aaa',
-    alignItems: 'center',
     justifyContent: 'center'
   },
   dateText: {

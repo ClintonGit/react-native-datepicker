@@ -178,7 +178,7 @@ class DatePicker extends Component {
       );
     }
     return (
-      <Text allowFontScaling={allowFontScaling} style={[Style.dateText, customStyles.dateText]}>
+      <Text allowFontScaling={allowFontScaling} style={[Style.dateText,customStyles.dateText,this.props.dateTextStyle]}>
         {this.getDateStr()}
       </Text>
     );
@@ -360,10 +360,10 @@ class DatePicker extends Component {
         <View style={[Style.dateTouchBody, customStyles.dateTouchBody]}>
           {
             !this.props.hideText ?
-              <View style={dateInputStyle}>
+              <View style={[dateInputStyle,this.props.styleInput]}>
                 {this.getTitleElement()}
               </View>
-            :
+              :
               <View/>
           }
           {this._renderIcon()}
